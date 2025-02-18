@@ -68,6 +68,9 @@ body {
 	width: 50dvw;
 	color: #fff;
 	place-items: center;
+	border-top: rgba(240, 248, 255, 0.404) 1px solid;
+	border-left: rgba(240, 248, 255, 0.404) 1px solid;
+	border-bottom: rgba(240, 248, 255, 0.404) 1px solid;
 	
 	.individual-pokemon {
 		width: 100%;
