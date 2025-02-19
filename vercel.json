@@ -4,24 +4,10 @@
     {
       "src": "src/pages/index.html",
       "use": "@vercel/static"
-    }
-  ],
-  "redirects": [
-    {
-      "source": "/styles",
-      "destination": "public/styles/"
     },
     {
-      "source": "/javascript",
-      "destination": "public/javascript/"
-    },
-    {
-      "source": "/images",
-      "destination": "public/images/"
-    },
-    {
-      "source": "/icons",
-      "destination": "public/icons/"
+      "src": "/public",
+      "use": "@vercel/static"
     }
   ]
 }
