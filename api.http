@@ -3,3 +3,6 @@ GET https://pokeapi.co/api/v2/pokemon/?limit=151
 ###
 
 GET https://pokeapi.co/api/v2/pokemon/1/
+
+###
+GET https://pokeapi.co/api/v2/pokemon/?limit=100&offset=151
