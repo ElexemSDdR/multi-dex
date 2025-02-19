@@ -12,7 +12,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-image: url('/images/fondo-pokemon.jpeg');
+	background-image: url('https://multi-dex-seven.vercel.app/images/fondo-pokemon.jpeg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
