@@ -10,22 +10,24 @@
     {
       "src": "/(.*)",
       "dest": "/index.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/styles",
+      "destination": "public/styles/"
     },
     {
-      "src": "/styles/(.*)",
-      "dest": "/public/styles/$1"
+      "source": "/javascript",
+      "destination": "public/javascript/"
     },
     {
-      "src": "/javascript/(.*)",
-      "dest": "/public/javascript/$1"
+      "source": "/images",
+      "destination": "public/images/"
     },
     {
-      "src": "/images/(.*)",
-      "dest": "/public/images/$1"	      
-    },
-    {
-      "src": "/icons/(.*)",
-      "dest": "/public/icons/$1"
+      "source": "/icons",
+      "destination": "public/icons/"
     }
   ]
 }
