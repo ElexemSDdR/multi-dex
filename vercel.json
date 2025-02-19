@@ -1,31 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "src/pages/index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "public/icons/pokeball-icon.ico",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "public/images/fondo-pokemon.jpeg",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "public/styles/styles.css",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "public/javascript/client.js",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "public/javascript/main.js",
-      "use": "@vercel/static"
-    }
-  ],
   "routes": [
     {
       "src": "/(.*)",
