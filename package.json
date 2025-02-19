@@ -1,18 +1,17 @@
 {
-  "name": "Pokedex",
+  "name": "pokedex",
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "app.js",
+  "main": "main.js",
   "scripts": {
-    "dev": "node --watch app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "4.21.2",
-    "path": "^0.12.7"
-  }
+  "keywords": [
+    "pokemon",
+    "poke-api",
+    "javascript"
+  ],
+  "author": "valen",
+  "license": "ISC"
 }
