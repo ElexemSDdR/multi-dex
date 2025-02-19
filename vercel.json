@@ -3,13 +3,7 @@
   "builds": [
     {
       "src": "src/pages/index.html",
-      "use": "@vercel/public/"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "use": "@vercel/static"
     }
   ],
   "redirects": [
