@@ -148,6 +148,9 @@ h3:first-letter {
 }
 
 @media (max-width: 800) {
+	body {
+		width: 100%
+	}
 	#pokedex {
 		width: 100%;
 	}
