@@ -63,7 +63,7 @@ body {
 	border-bottom-left-radius: 1rem;
 	gap: 1rem;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	height: 100vh;
+	height: 94dvh;
 	margin-inline: auto;
 	overflow-y: scroll;
 	overflow-x: hidden;
