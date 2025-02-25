@@ -24,6 +24,8 @@ const $hoenn = document.querySelector('#hoenn')
 const $sinnoh = document.querySelector('#sinnoh')
 const $unova = document.querySelector('#unova')
 const $kalos = document.querySelector('#kalos')
+const $mobile = document.querySelector('.mobile')
+const $buttons = document.querySelector('.buttons')
 
 const renderPokemon = async (regionDex = kantoDex) => {
   const pkmns = await regionDex 
@@ -68,32 +70,42 @@ const renderPokemon = async (regionDex = kantoDex) => {
 }
 
 $kanto.addEventListener('click', async () => {
+  $buttons.classList.toggle('visible')
   await renderPokemon()
 })
 
 $johto.addEventListener('click', async () => {
   const johtoPkmns = await obtainPokemonData(LIMIT_JOHTO, OFFSET_JOHTO)
+  $buttons.classList.toggle('visible')
   await renderPokemon(johtoPkmns)
 })
 
 $hoenn.addEventListener('click', async () => {
   const hoennPkmns = await obtainPokemonData(LIMIT_HOENN, OFFSET_HOENN)
+  $buttons.classList.toggle('visible')
   await renderPokemon(hoennPkmns)
 })
 
 $sinnoh.addEventListener('click', async () => {
   const sinnohPkmns = await obtainPokemonData(LIMIT_SINNOH, OFFSET_SINNOH)
+  $buttons.classList.toggle('visible')
   await renderPokemon(sinnohPkmns)
 })
 
 $unova.addEventListener('click', async () => {
   const unovaPkmns = await obtainPokemonData(LIMIT_UNOVA, OFFSET_UNOVA)
+  $buttons.classList.toggle('visible')
   await renderPokemon(unovaPkmns)
 })
 
 $kalos.addEventListener('click', async () => {
   const kalosPkmns = await obtainPokemonData(LIMIT_KALOS, OFFSET_KALOS)
+  $buttons.classList.toggle('visible')
   await renderPokemon(kalosPkmns)
+})
+
+$mobile.addEventListener('click', () => {
+  $buttons.classList.toggle('visible')
 })
 
 document.addEventListener('DOMContentLoaded', async () => {
