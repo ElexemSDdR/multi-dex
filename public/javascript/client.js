@@ -3,17 +3,23 @@ import {
   kantoDex,
   obtainPokemonData,
   LIMIT_KANTO,
+  LIMIT_JOHTO,
   LIMIT_HOENN,
   LIMIT_SINNOH,
   LIMIT_UNOVA,
   LIMIT_KALOS,
+  LIMIT_ALOLA,
+  LIMIT_GALAR_AND_HISUI,
+  LIMIT_PALDEA,
   OFFSET_KANTO,
   OFFSET_JOHTO,
   OFFSET_HOENN,
   OFFSET_SINNOH,
   OFFSET_UNOVA,
   OFFSET_KALOS,
-  LIMIT_JOHTO
+  OFFSET_ALOLA,
+  OFFSET_GALAR_AND_HISUI,
+  OFFSET_PALDEA
 } from './main.js'
 
 const $pokedex = document.querySelector('#pokedex')
@@ -24,8 +30,12 @@ const $hoenn = document.querySelector('#hoenn')
 const $sinnoh = document.querySelector('#sinnoh')
 const $unova = document.querySelector('#unova')
 const $kalos = document.querySelector('#kalos')
+const $alola = document.querySelector('#alola')
+const $galarAndHisui = document.querySelector('#galar-and-hisui')
+const $paldea = document.querySelector('#paldea')
 const $mobile = document.querySelector('.mobile')
 const $buttons = document.querySelector('.buttons')
+
 
 const renderPokemon = async (regionDex = kantoDex) => {
   const pkmns = await regionDex 
@@ -46,7 +56,10 @@ const renderPokemon = async (regionDex = kantoDex) => {
           aux.length === LIMIT_HOENN || 
           aux.length === LIMIT_SINNOH || 
           aux.length === LIMIT_UNOVA || 
-          aux.length === LIMIT_KALOS
+          aux.length === LIMIT_KALOS ||
+          aux.length === LIMIT_ALOLA ||
+          aux.length === LIMIT_GALAR_AND_HISUI ||
+          aux.length === LIMIT_PALDEA
         ) {
         sortedPkmns = aux.sort((a, b) => a.id - b.id)
       }
@@ -102,6 +115,24 @@ $kalos.addEventListener('click', async () => {
   const kalosPkmns = await obtainPokemonData(LIMIT_KALOS, OFFSET_KALOS)
   $buttons.classList.toggle('visible')
   await renderPokemon(kalosPkmns)
+})
+
+$alola.addEventListener('click', async () => {
+  const alolaPkmns = await obtainPokemonData(LIMIT_ALOLA, OFFSET_ALOLA)
+  $buttons.classList.toggle('visible')
+  await renderPokemon(alolaPkmns)
+})
+
+$galarAndHisui.addEventListener('click', async () => {
+  const galarAndHisuiPkmns = await obtainPokemonData(LIMIT_GALAR_AND_HISUI, OFFSET_GALAR_AND_HISUI)
+  $buttons.classList.toggle('visible')
+  await renderPokemon(galarAndHisuiPkmns)
+})
+
+$paldea.addEventListener('click', async () => {
+  const paldeaPkmns = await obtainPokemonData(LIMIT_PALDEA, OFFSET_PALDEA)
+  $buttons.classList.toggle('visible')
+  await renderPokemon(paldeaPkmns)
 })
 
 $mobile.addEventListener('click', () => {
